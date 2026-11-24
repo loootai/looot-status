@@ -1,0 +1,125 @@
+{
+ "version": 1,
+ "generatedAt": "2026-11-24T12:16:37.439Z",
+ "components": [
+  {
+   "id": "api",
+   "name": "API gateway",
+   "description": "REST API, CLI and runs",
+   "state": "up",
+   "lastCheck": {
+    "at": "2026-11-24T12:16:37.439Z",
+    "ok": true,
+    "slow": false,
+    "status": 200,
+    "ms": 366,
+    "error": null
+   }
+  },
+  {
+   "id": "dashboard",
+   "name": "Dashboard",
+   "description": "Sign-in and the looot.ai dashboard",
+   "state": "up",
+   "lastCheck": {
+    "at": "2026-11-24T12:16:37.439Z",
+    "ok": true,
+    "slow": false,
+    "status": 200,
+    "ms": 378,
+    "error": null
+   }
+  },
+  {
+   "id": "catalog",
+   "name": "Catalog",
+   "description": "Search and the public catalog",
+   "state": "up",
+   "lastCheck": {
+    "at": "2026-11-24T12:16:37.439Z",
+    "ok": true,
+    "slow": false,
+    "status": 200,
+    "ms": 716,
+    "error": null
+   }
+  },
+  {
+   "id": "mcp",
+   "name": "MCP",
+   "description": "The MCP server at api.looot.ai/mcp",
+   "state": "up",
+   "lastCheck": {
+    "at": "2026-11-24T12:16:37.439Z",
+    "ok": true,
+    "slow": false,
+    "status": 401,
+    "ms": 235,
+    "error": null
+   }
+  }
+ ],
+ "days": {
+  "2026-11-24": {
+   "api": {
+    "up": 1,
+    "total": 1
+   },
+   "dashboard": {
+    "up": 1,
+    "total": 1
+   },
+   "catalog": {
+    "up": 1,
+    "total": 1
+   },
+   "mcp": {
+    "up": 1,
+    "total": 1
+   }
+  }
+ },
+ "incidents": [],
+ "recentChecks": {
+  "api": [
+   {
+    "at": "2026-11-24T12:16:37.439Z",
+    "ok": true,
+    "slow": false,
+    "status": 200,
+    "ms": 366,
+    "error": null
+   }
+  ],
+  "dashboard": [
+   {
+    "at": "2026-11-24T12:16:37.439Z",
+    "ok": true,
+    "slow": false,
+    "status": 200,
+    "ms": 378,
+    "error": null
+   }
+  ],
+  "catalog": [
+   {
+    "at": "2026-11-24T12:16:37.439Z",
+    "ok": true,
+    "slow": false,
+    "status": 200,
+    "ms": 716,
+    "error": null
+   }
+  ],
+  "mcp": [
+   {
+    "at": "2026-11-24T12:16:37.439Z",
+    "ok": true,
+    "slow": false,
+    "status": 401,
+    "ms": 235,
+    "error": null
+   }
+  ]
+ }
+}
