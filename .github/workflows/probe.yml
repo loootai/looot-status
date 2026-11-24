@@ -1,0 +1,35 @@
+# looot status probe (#3353, in coset-gateway at scripts/status/data-repo). Every 5 minutes, and on every push of an
+# incident note, it checks the four components and commits status.json, which looot.ai/status reads. A public repo,
+# so scheduled runs cost no Actions minutes. GitHub starts schedules late at busy times: the page shows the last check time.
+name: probe
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  push:
+    branches: [main]
+    paths: ["incidents/**", "probe.mjs"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Probe (incident edits republish without a check round)
+        run: node probe.mjs ${{ github.event_name == 'push' && '--incidents-only' || '' }}
+      - name: Commit status.json
+        run: |
+          git config user.name "looot-status-probe"
+          git config user.email "looot-status-probe@users.noreply.github.com"
+          git add status.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "status: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull -q --rebase origin main && git push -q origin HEAD:main
