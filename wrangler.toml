@@ -1,0 +1,13 @@
+# looot status keeper (#3353): starts probe.yml every 5 minutes when no probe run is active. See worker/index.mjs.
+name = "looot-status-keeper"
+main = "worker/index.mjs"
+compatibility_date = "2026-11-01"
+workers_dev = false
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[vars]
+REPO = "loootai/looot-status"
+BRANCH = "main"
+# Secret (wrangler secret put GITHUB_TOKEN): fine-grained token, repository loootai/looot-status only, Actions: read and write.

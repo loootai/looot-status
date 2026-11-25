@@ -14,3 +14,10 @@ loootai/coset-gateway (#3353); change them there by PR and copy them here.
   - Add each update as a new `## <time> UTC, <status>` section at the top of the updates; set `resolved:` and
     `status: resolved` when it is over.
 - Never put a key, a customer's name or internal detail in a note: this repo is public.
+
+## Timer: the keeper Worker
+
+GitHub's schedule skips hours, so a Cloudflare Worker (`worker/index.mjs`, `wrangler.toml`, Cron Trigger every 5 minutes,
+free tier) starts `probe.yml` by `workflow_dispatch` whenever no probe run is queued or running. The cron lines in
+`probe.yml` stay as a fallback. Test: `node --test worker/index.test.mjs`. Deploy: `npx wrangler deploy` and
+`npx wrangler secret put GITHUB_TOKEN` (fine-grained, this repo only, Actions read and write).
