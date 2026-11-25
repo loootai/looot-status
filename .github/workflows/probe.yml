@@ -4,7 +4,7 @@
 name: probe
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/5 * * * *" # re-registered 2026-11-25: the schedule never fired after the repo was created
   push:
     branches: [main]
     paths: ["incidents/**", "probe.mjs"]
