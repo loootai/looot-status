@@ -4,7 +4,9 @@
 name: probe
 on:
   schedule:
-    - cron: "*/5 * * * *" # re-registered 2026-11-25: the schedule never fired after the repo was created
+    - cron: "*/5 * * * *"
+    # Fallback at odd minutes: GitHub delays or drops */5 schedules at busy times (2026-11-25).
+    - cron: "7,17,27,37,47,57 * * * *"
   push:
     branches: [main]
     paths: ["incidents/**", "probe.mjs"]
