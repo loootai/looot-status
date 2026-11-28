@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": "2026-11-28T12:08:27.333Z",
+ "generatedAt": "2026-11-28T18:57:43.473Z",
  "components": [
   {
    "id": "api",
@@ -8,11 +8,11 @@
    "description": "REST API, CLI and runs",
    "state": "up",
    "lastCheck": {
-    "at": "2026-11-28T12:08:27.333Z",
+    "at": "2026-11-28T18:57:43.473Z",
     "ok": true,
     "slow": false,
     "status": 200,
-    "ms": 353,
+    "ms": 238,
     "error": null
    }
   },
@@ -22,11 +22,11 @@
    "description": "Sign-in and the looot.ai dashboard",
    "state": "up",
    "lastCheck": {
-    "at": "2026-11-28T12:08:27.333Z",
+    "at": "2026-11-28T18:57:43.473Z",
     "ok": true,
     "slow": false,
     "status": 200,
-    "ms": 414,
+    "ms": 345,
     "error": null
    }
   },
@@ -36,11 +36,11 @@
    "description": "Search and the public catalog",
    "state": "up",
    "lastCheck": {
-    "at": "2026-11-28T12:08:27.333Z",
+    "at": "2026-11-28T18:57:43.473Z",
     "ok": true,
     "slow": false,
     "status": 200,
-    "ms": 313,
+    "ms": 345,
     "error": null
    }
   },
@@ -50,11 +50,11 @@
    "description": "The MCP server at api.looot.ai/mcp",
    "state": "up",
    "lastCheck": {
-    "at": "2026-11-28T12:08:27.333Z",
+    "at": "2026-11-28T18:57:43.473Z",
     "ok": true,
     "slow": false,
     "status": 401,
-    "ms": 507,
+    "ms": 190,
     "error": null
    }
   }
@@ -134,26 +134,34 @@
   },
   "2026-11-28": {
    "api": {
-    "up": 4,
-    "total": 4
+    "up": 5,
+    "total": 5
    },
    "dashboard": {
-    "up": 4,
-    "total": 4
+    "up": 5,
+    "total": 5
    },
    "catalog": {
-    "up": 4,
-    "total": 4
+    "up": 5,
+    "total": 5
    },
    "mcp": {
-    "up": 4,
-    "total": 4
+    "up": 5,
+    "total": 5
    }
   }
  },
  "incidents": [],
  "recentChecks": {
   "api": [
+   {
+    "at": "2026-11-28T18:57:43.473Z",
+    "ok": true,
+    "slow": false,
+    "status": 200,
+    "ms": 238,
+    "error": null
+   },
    {
     "at": "2026-11-28T12:08:27.333Z",
     "ok": true,
@@ -169,17 +177,17 @@
     "status": 200,
     "ms": 348,
     "error": null
-   },
-   {
-    "at": "2026-11-28T03:21:18.654Z",
-    "ok": true,
-    "slow": false,
-    "status": 200,
-    "ms": 327,
-    "error": null
    }
   ],
   "dashboard": [
+   {
+    "at": "2026-11-28T18:57:43.473Z",
+    "ok": true,
+    "slow": false,
+    "status": 200,
+    "ms": 345,
+    "error": null
+   },
    {
     "at": "2026-11-28T12:08:27.333Z",
     "ok": true,
@@ -195,17 +203,17 @@
     "status": 200,
     "ms": 322,
     "error": null
-   },
-   {
-    "at": "2026-11-28T03:21:18.654Z",
-    "ok": true,
-    "slow": false,
-    "status": 200,
-    "ms": 630,
-    "error": null
    }
   ],
   "catalog": [
+   {
+    "at": "2026-11-28T18:57:43.473Z",
+    "ok": true,
+    "slow": false,
+    "status": 200,
+    "ms": 345,
+    "error": null
+   },
    {
     "at": "2026-11-28T12:08:27.333Z",
     "ok": true,
@@ -221,17 +229,17 @@
     "status": 200,
     "ms": 458,
     "error": null
-   },
-   {
-    "at": "2026-11-28T03:21:18.654Z",
-    "ok": true,
-    "slow": false,
-    "status": 200,
-    "ms": 533,
-    "error": null
    }
   ],
   "mcp": [
+   {
+    "at": "2026-11-28T18:57:43.473Z",
+    "ok": true,
+    "slow": false,
+    "status": 401,
+    "ms": 190,
+    "error": null
+   },
    {
     "at": "2026-11-28T12:08:27.333Z",
     "ok": true,
@@ -246,14 +254,6 @@
     "slow": false,
     "status": 401,
     "ms": 315,
-    "error": null
-   },
-   {
-    "at": "2026-11-28T03:21:18.654Z",
-    "ok": true,
-    "slow": false,
-    "status": 401,
-    "ms": 297,
     "error": null
    }
   ]
